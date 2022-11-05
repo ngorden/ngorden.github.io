@@ -1,0 +1,548 @@
+* {
+    background-color: #a6a696;
+    color: black;
+}
+
+*::after,
+*::before {
+    background-color: inherit;
+    color: inherit;
+}
+
+body {
+    color: #222;
+    font-family: serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+/* begining: setup centered theme */
+#header > div, #footer > div, #content > div {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+#content > div {
+    max-width: 1000px;
+    background-color: inherit;
+    border: none;
+}
+
+/* end: setup centered theme */
+
+a {
+    color: #005386;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr.hidden-ruler {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#header {
+    clear: both;
+    color: #000;
+    background: inherit;
+    height: 2.75em;
+    font-size: 1.3em;
+    font-family: monospace;
+    line-height: 2.75em;
+    padding: 0 1em;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#header-logo img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+#header-subtitle {
+    color: #cacaca;
+    display: inline-block;
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+#header-link,
+#header-link:hover,
+#header-logo:hover {
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+#header-source {
+    color: inherit;
+    font-size: 0.75em;
+    float: right;
+}
+
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+
+h1 {
+    border-bottom: 1px solid #cacaca;
+    margin: 1em 0 1em 0;
+    padding: 0 0 0.25em 0;
+    font-size: 1.4rem;
+}
+
+h2, h3, h4 {
+    margin: 1em 0 0 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.0rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+}
+
+p, li {
+    color: #444;
+}
+
+#main p, #main li {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+code {
+    font-family: monospace;
+    font-size: 1rem;
+    background-color: #efefef;
+    padding: 0.3em;
+}
+
+pre {
+    background-color: inherit;
+    padding: 1em;
+    overflow: auto;
+}
+
+pre code {
+    font-size: 0.9rem;
+    background-color: inherit !important;
+    padding: 0;
+}
+
+#content {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav {
+    background-color: inherit;
+    margin: 0 1px 0 0;
+    padding: 1em 0;
+    border-right: 1px solid #f4f4f4;
+    min-width: 10em;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav > div > ul:first-child li > a:before {
+    content: "\203A";
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em;
+}
+
+#nav > div > ul:first-child li.active > a:before {
+    content: "\00BB";
+}
+
+/* keep link hover over full width, base level */
+#nav li a {
+    display: block;
+    margin: 0;
+    padding: 0.2em 2em;
+    font-family: sans-serif;
+    font-size: .9em;
+}
+
+/* keep link hover over full width, first level */
+#nav li ul > li a {
+    padding-left: 2.6em !important;
+}
+
+/* keep link hover over full width, second level */
+#nav li ul ul > li a {
+    padding-left: 3.2em !important;
+}
+
+/* keep link hover over full width, third level */
+#nav li ul ul ul > li a {
+    padding-left: 3.8em !important;
+}
+
+#nav li a:hover {
+    background-color: #fafafa;
+    text-decoration: none;
+}
+
+#nav li.active > a {
+    color: #222;
+}
+
+#main {
+    background-color: inherit;
+    /*	margin          : 0 0 0 200px;*/
+    padding: 0 1.5em;
+    /*	max-width       : 50em;*/
+}
+
+#footer {
+    background-color: inherit;
+    clear: both;
+    color: #666;
+    border-top: 1px solid #f4f4f4;
+    font-size: 0.85em;
+    font-family: monospace;
+    line-height: 1.7em;
+    padding: 1em;
+    margin: 0 0 1.5em 0;
+}
+
+span.left {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+span.right {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.definition {
+    padding-left: 2em;
+}
+
+.definition > p:first-child {
+    text-indent: -2em;
+}
+
+.reference {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+#main p.left {
+    text-align: left;
+}
+
+#main p.center {
+    text-align: center;
+}
+
+#main p.right {
+    text-align: right;
+}
+
+#main .edit-note {
+    background: #efd9fd;
+    padding: 0.1rem 1rem;
+    font-family: sans-serif;
+    font-size: 80%;
+    border-radius: 0.5rem;
+}
+
+#main .edit-note dl {
+    padding: 0.5rem;
+}
+
+#main .edit-note h3 {
+    color: #3b2e58;
+    background: no-repeat 0 center;
+    padding-left: 1.5rem;
+}
+
+#main .edit-note dt {
+    color: #3b2e58;
+    text-indent: 0;
+}
+
+#main .edit-note dd {
+    clear: both;
+}
+
+#main .edit-note dd > ul {
+    padding: 0 1rem;
+}
+
+#main p.article-author, #main p.article-date {
+    background: none no-repeat 0 center;
+    padding-left: 1.5rem;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 90%;
+    line-height: 1.5;
+    margin: 0 1.5rem 0 0;
+}
+
+#main p.article-date ~ .wrap-list {
+    margin-top: -.5em;
+}
+
+.wrap-list > ul {
+    flex-wrap: wrap !important;
+    display: flex !important;
+    padding-left: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap-list > ul > li {
+    margin-right: 0.5rem !important;
+    margin-top: 0.5rem !important;
+    box-sizing: border-box;
+}
+
+.spoiler {
+    color: #000;
+    background: #000;
+    cursor: pointer;
+}
+
+.spoiler:active {
+    color: inherit;
+    background: inherit;
+}
+
+.articles ul {
+    margin: 0;
+    padding: 0;
+}
+
+.articles li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a.twtxt, a.source {
+    display: block;
+    background: none no-repeat 0.7em center;
+    background-size: 0.95em;
+    padding: 0.2em 0 0.2em 2em !important;
+    margin: 0;
+}
+
+a.source {
+    display: none !important;
+}
+
+ul.repo-log {
+    list-style-type: none;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul.repo-log li {
+    font-family: monospace;
+    font-size: 0.7em;
+    text-align: left !important;
+}
+
+ul.repo-log li .log-date {
+    font-weight: bold;
+    padding-right: 1em;
+}
+
+/* table of contents */
+.toc {
+    background-color: inherit;
+    padding: 0.5em 2em 2em;
+    overflow: auto;
+    font-family: sans-serif;
+}
+
+.toc .toc-title {
+    font-weight: 700;
+}
+
+.toc > ul,
+.toc > ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc > ul ul {
+    padding-left: 1.5em;
+}
+
+.toc li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.grohtml img {
+    margin-left: 2em;
+    padding: 1em 1.5em;
+    border: 1px solid #ccc;
+}
+
+.theorem img {
+    padding: 1em 1.5em;
+    border: 1px double #000;
+    outline: 2px solid #000;
+    outline-offset: -4px;
+}
+
+dl, dt, dd {
+    padding: 0;
+    margin: 0;
+}
+
+dt {
+    float: left;
+    font-weight: bolder;
+    padding-right: 1ch;
+    text-align: right;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+dl {
+    padding-left: 2em;
+}
+
+dl > dt {
+    text-indent: -2em;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger ~ label {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    table,
+    table tbody,
+    table tr,
+    table tr td {
+        background: inherit;
+        display: block !important;
+    }
+
+    #burger-wrapper {
+        display: none;
+    }
+
+    #nav {
+        width: auto;
+        max-width: 15em;
+        border: none;
+        padding: 0;
+    }
+
+    #main {
+        padding: 0 0.5em;
+    }
+
+    #hamburger ~ label {
+        display: block;
+        color: black;
+        background: white;
+        font-style: normal;
+        text-align: center;
+        font-size: 1.4rem;
+        padding: .45em .6em;
+        user-select: none;
+        cursor: pointer;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    #hamburger ~ label:before {
+        content: "\2630"
+    }
+
+    #hamburger:checked ~ label:before {
+        content: "\2A09"
+    }
+
+    #hamburger:checked ~ #burger-wrapper {
+        display: block;
+    }
+
+    #hamburger:checked ~ label {
+        color: white;
+        background: black;
+    }
+
+    #hamburger ~ #burger-wrapper {
+        width: 100%;
+        position: fixed;
+        font-size: 1.4rem;
+        top: 2.3em;
+        bottom: 0;
+        left: 0;
+        padding: 0.5em 0;
+        background: #fff;
+        overflow-x: scroll;
+    }
+
+    #header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 998;
+    }
+
+    #content {
+        margin: 2.75em 0 0 0;
+    }
+
+    #header-source {
+        display: none;
+    }
+}
