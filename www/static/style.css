@@ -22,7 +22,7 @@ body {
 /* begining: setup centered theme */
 #header > div, #footer > div, #content > div {
     max-width: 980px;
-    margin: 0 auto;
+    margin: 0 1.5rem auto;
 }
 
 #content > div {
@@ -136,6 +136,16 @@ code {
     font-size: 1rem;
     background-color: #efefef;
     padding: 0.3em;
+}
+
+p#quote {
+    margin-top: inherit;
+    padding: -1rem;
+    text-align: center;
+}
+
+p#quote-source {
+    text-align: right;
 }
 
 pre {
